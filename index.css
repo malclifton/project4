@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'Aileron';
+  src: url('./fonts/aileron.light.otf') format('truetype');
+}
+@font-face {
+  font-family: 'TT Commons Pro';
+  src: url('./fonts/Fontspring-DEMO-tt_commons_pro_regular.otf') format('truetype');
+}
+
+.landing{
+  background-image: url("./img/landingBackground.webp");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body {
+  font-family: 'Aileron', sans-serif;
+  color: white;
+}
+
+.taskbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.taskbar h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.task_buttons {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 15px;
+}
+
+.task_buttons button {
+  background: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.task_buttons button:hover {
+  background: black;
+  color: white;
+border: 2px solid white;
+}
+
+.page {
+   position: absolute; 
+  left: 50px;
+  top: 50%; 
+  transform: translateY(-50%);
+  text-align: left; 
+}
+
+.page h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.page_buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.page_buttons button {
+  background: white;
+  color: black;
+  border: 2px solid white;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.page_buttons button:hover {
+  background: black;
+  color: white;
+}
+
+.about{
+  background-color: #f8fbf8;
+  color: black;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.about p{
+  font-family: 'TT Commons Pro', sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+  height: 100%;
+  max-width: 90vw;
+  margin: auto;
+  gap: 20px;
+}
+
+.container img {
+  width: 45%;
+  height: auto;
+  max-height: 90%;
+  border-radius: 8px;
+}
+
+.content {
+  width: 50%;
+  overflow-y: auto;
+  display: flex;
+  justify-content:center;
+  height: 100%;
+  flex-direction: column;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.content button{
+  align-self: center;
+  background: black;
+  color: white;
+  border: 2px solid black;
+  padding: 10px 30px;
+  font-size: 16px;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
