@@ -10,10 +10,10 @@
     <div class="taskbar">
       <h2>HubbleHome</h2>
       <div class="task_buttons">
-        <button id="login" onclick="window.location.href = './signUp.php';">
+        <button id="login" onclick="window.location.href = './signUp.html';">
           SIGN UP
         </button>
-        <button id="signup" onclick="window.location.href = './SignIn.php';">
+        <button id="signup" onclick="window.location.href = './signIn.html';">
           SIGN IN
         </button>
       </div>
@@ -29,11 +29,54 @@
         </button>
         <button
           id="view"
-          onclick="window.location.href = './propertiesList.html';"
+          onclick="window.location.href = './propertiesList.php';"
         >
           VIEW HOMES
         </button>
       </div>
     </div>
+
+    <!-- Popup -->
+    <div class="popup-overlay" id="popupOverlay"></div>
+    <div class="popup" id="popupMessage">
+      <p id="popupText"></p>
+      <button id="closePopupButton" onclick="closePopup()">Ok</button>
+    </div>
+    <script>
+      function getQueryParams() {
+        return new URLSearchParams(window.location.search);
+      }
+
+      function removeQueryParams() {
+        const url = new URL(window.location.href);
+        url.search = "";
+        window.history.replaceState({}, document.title, url.toString());
+      }
+
+      function showPopup() {
+        const params = getQueryParams();
+        const popupText = document.getElementById("popupText");
+
+        if (params.get("signup") === "success") {
+          popupText.textContent = "Sign up successful!";
+        } else if (params.get("signin") === "success") {
+          const username = params.get("username") || "User";
+          popupText.textContent = `Sign in successful. Welcome, ${username}!`;
+        } else {
+          return;
+        }
+
+        document.getElementById("popupOverlay").classList.add("visible");
+        document.getElementById("popupMessage").classList.add("visible");
+        removeQueryParams();
+      }
+
+      function closePopup() {
+        document.getElementById("popupOverlay").classList.remove("visible");
+        document.getElementById("popupMessage").classList.remove("visible");
+      }
+
+      document.addEventListener("DOMContentLoaded", showPopup);
+    </script>
   </body>
 </html>

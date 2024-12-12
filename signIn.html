@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./forms.css" />
+    <title>HubbleHome SignIn</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Sign In</h1>
+      <form action="./signIn.php" method="post">
+        <input type="email" id="email" name="email" placeholder="Email" /><br />
+
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Username"
+        /><br />
+
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password"
+        /><br />
+        <input
+          type="submit"
+          id="submit"
+          name="submit"
+          value="Submit"
+          class="btn"
+        />
+      </form>
+      <br />
+      <button
+        id="login"
+        class="btn"
+        onclick="window.location.href = './signUp.html';"
+      >
+        Sign Up?
+      </button>
+    </div>
+  </body>
+</html>
