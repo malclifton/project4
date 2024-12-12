@@ -1,0 +1,130 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.for-sale-btn {
+    background-color: #e9e9e9;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.search-bar input {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-bar button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Main Section */
+main {
+    padding: 20px 40px;
+}
+
+.property-container {
+    background-color: #f4f4f4; /* Matches header color */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.property-details {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+}
+
+.property-image img {
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.property-info {
+    padding-top: 20px;
+    margin-right: 300px;
+}
+
+.property-info h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 100px;
+}
+
+.property-info p {
+    margin-bottom: 10px;
+    font-size: 20px;
+    margin-left: 100px;
+
+
+}
+
+.property-info .accessible {
+    color: #777;
+    font-style: italic;
+}
+
+/* Heart Icon */
+.heart-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.heart-icon img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
