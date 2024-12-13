@@ -57,9 +57,7 @@
         const params = getQueryParams();
         const popupText = document.getElementById("popupText");
 
-        if (params.get("signup") === "success") {
-          popupText.textContent = "Sign up successful!";
-        } else if (params.get("signin") === "success") {
+        if (params.get("signin") === "success") {
           const username = params.get("username") || "User";
           popupText.textContent = `Sign in successful. Welcome, ${username}!`;
         } else {

@@ -59,7 +59,7 @@ $stmt = $conn->prepare("INSERT INTO users2 (firstname, lastname, email, username
 $stmt->bind_param("sssss", $fname, $lname, $email, $username, $password_hash);
 
 if ($stmt->execute()) {
-    header("Location: ./landingpage.html?signup=success");
+    header("Location: ./signIn.html");
     exit;
 } else {
     die("Error: " . $stmt->error);
