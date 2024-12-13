@@ -1,8 +1,8 @@
-HOUSE|234 Beldren Drive|4 Beds|3 Baths|No Garage|./img/property_1.jpeg
-HOUSE|4000 Roselton Tower|5 Beds|4 Baths|3 Car Garage|./img/property_2.jpeg
-HOUSE|1005 Venstone Road|3 Beds|3 Baths|No Garage|./img/property_3.jpeg
-HOUSE|7654 Elmwood Lane|3 Beds|2 Baths|1 Car Garage|./img/property_4.jpeg
-HOUSE|2120 Sunset Villa|4 Beds|3 Baths|Pool|./img/property_5.jpeg
-MANSION|301 Greenview Heights|5 Bed|4 Bath|2 Car Garage|./img/property_6.jpeg
-MANSION|98 Riverbend Retreat|3 Beds|2 Bath|Garden|./img/property_7.jpeg
-HOUSE|7890 Beverly Hills Estate|6 Beds|8 Baths|4 Car Garage|./img/property_8.jpeg
+HOUSE|456 Maple Avenue|3 Beds|2 Baths|2 Garage|./img/property_1.jpeg
+HOUSE|789 Pine Road|5 Beds|4 Baths|3 Car Garage|./img/property_2.jpeg
+HOUSE|321 Birch Lane|3 Beds|3 Baths|2 Car Garage|./img/property_3.jpeg
+HOUSE|654 Elm Drive|5 Beds|3 Baths|4 Car Garage|./img/property_4.jpeg
+HOUSE|987 Sycamore Street|2 Beds|2 Baths|2 Car Garage|./img/property_5.jpeg
+MANSION|159 Willow Way|5 Bed|4 Bath|2 Car Garage|./img/property_6.jpeg
+MANSION|246 Cedar Court|4 Beds|2 Bath|3 Car Garage|./img/property_7.jpeg
+MANSION|123 Oak Street|6 Beds|8 Baths|4 Car Garage|./img/property_8.jpeg

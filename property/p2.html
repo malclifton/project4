@@ -1,42 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>789 Pine Road, Greentree 54321
-    </title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>789 Pine Road, Greentree 54321</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <h1>789 Pine Road, Greentree 54321
-        </h1>
-        <div class="header-icons">
-            <div class="search-bar">
-                <input type="text" placeholder="For Sale">
-            </div>
-            <button class="menu-btn">
-                <img src="../img/menu-59.png" alt="Menu">
-            </button>
+      <div class="container">
+        <div class="header">
+          <h1>789 Pine Road, Greentree 54321</h1>
+          <div class="header-buttons">
+            <a onclick="window.location.href = '../landingpage.html';">⌂</a>
+            <a onclick="window.location.href = '../account.html';">☺</a>
+            <a onclick="window.location.href = '../favorites.html';">♡</a>
+          </div>
+          <div class="property-search">
+            <input
+              type="search"
+              placeholder="For Sale"
+              id="propertySearch"
+              name="propertySearch"
+            />
+            <button>⌕</button>
+          </div>
         </div>
+      </div>
+      <br /><br /><br />
     </header>
     <main>
-        <div class="property-container">
-            <div class="property-details">
-                <div class="property-image">
-                    <img src="../img/property_2.jpeg" alt="Property Image">
-                </div>
-                <div class="property-info">
-                    <h2>HOUSE</h2>
-                    <p>4 Beds | 4 Baths | 3-Car Garage</p>
-                    <p>This is a two-story traditional-style home. The exterior is primarily white with contrasting dark roof tiles and decorative trim elements.
-                    </p>
-                </div>
-                <div class="heart-icon">
-                    <img src="../img/heart-1179072_640.webp" alt="Favorite">
-                </div>
-            </div>
+      <div class="property-container">
+        <div class="property-details">
+          <div class="property-image">
+            <img src="../img/property_2.jpeg" alt="Property Image" />
+          </div>
+          <div class="property-info">
+            <h2>HOUSE</h2>
+            <p>5 Beds | 4 Baths | 3-Car Garage</p>
+            <p>
+              This is a two-story traditional-style home. The exterior is
+              primarily white with contrasting dark roof tiles and decorative
+              trim elements.
+            </p>
+          </div>
         </div>
+      </div>
     </main>
-</body>
+    <script src="../index.js"></script>
+  </body>
 </html>

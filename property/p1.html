@@ -9,16 +9,26 @@
 </head>
 <body>
     <header>
-        <h1>456 Maple Avenue, Smallville 67890
-        </h1>
-        <div class="header-icons">
-            <div class="search-bar">
-                <input type="text" placeholder="For Sale">
-            </div>
-            <button class="menu-btn">
-                <img src="../img/menu-59.png" alt="Menu">
-            </button>
+        <div class="container">
+      <div class="header">
+        <h1>456 Maple Avenue, Smallville 67890</h1>
+        <div class="header-right">
+          <div class="header-buttons">
+            <a onclick="window.location.href = '../landingpage.html';">⌂</a>
+            <a onclick="window.location.href = '../account.html';">☺</a>
+            <a onclick="window.location.href = '../favorites.html';">♡</a>
+          </div>
+          <div class="property-search">
+            <input
+              type="search"
+              placeholder="For Sale"
+              id="propertySearch"
+              name="propertySearch"
+            />
+            <button>⌕</button>
+          </div>
         </div>
+      </div>
     </header>
     <main>
         <div class="property-container">
@@ -32,11 +42,9 @@
                     <p>This is a two-story farmhouse-style home with a covered porch and arched entryway. The exterior features a mix of wooden siding and stonework giving it a warm aesthetic. The home is surrounded by lush greenery.
                     </p>
                 </div>
-                <div class="heart-icon">
-                    <img src="../img/heart-1179072_640.webp" alt="Favorite">
-                </div>
             </div>
         </div>
     </main>
+     <script src="../index.js"></script>
 </body>
 </html>

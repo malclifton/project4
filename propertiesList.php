@@ -37,12 +37,14 @@ $properties = file('./properties.txt', FILE_IGNORE_NEW_LINES);
     <div class="carousel" id="carousel">
       <button class="carousel-button" id="prevButton">⪡</button>
       <div class="carousel-container">
-        <?php foreach ($properties as $line):
+        <?php
+        $index = 1;
+        foreach ($properties as $line):
           // Split the line into an array
           $details = explode('|', $line);
 
-          //image path
-          $image = array_pop($details);
+          //image path (last element of the array)
+          $image = array_pop($details); // removes and returns the last element (image path)
 
           // join remaining details
           $address = $details[1];
@@ -59,16 +61,22 @@ $properties = file('./properties.txt', FILE_IGNORE_NEW_LINES);
               <p><?= htmlspecialchars($description) ?></p>
             </div>
             <div class="favorite-icon">
-              <button class="add-favorite" id="favorite-btn-<?= htmlspecialchars($address) ?>" data-address="<?= htmlspecialchars($address) ?>" data-description="<?= htmlspecialchars($description) ?>" data-image="<?= htmlspecialchars($image) ?>">❤</button>
+              <button class="add-favorite">❤</button>
+            </div>
+            <div class="details-button">
+              <button class="infoButton" onclick="window.location.href='./property/p<?= $index ?>.html';">View Property</button>
             </div>
           </div>
-        <?php endforeach; ?>
+        <?php
+          $index++;
+        endforeach; ?>
       </div>
 
       <button class="carousel-button" id="nextButton">⪢</button>
     </div>
   </div>
   <script src="./index.js"></script>
+  <script src="./favorites.js"></script>
 </body>
 
 </html>

@@ -42,10 +42,15 @@ nextButton.addEventListener("click", () => {
 propertySearchInput.addEventListener("input", () => {
   const searchTerm = propertySearchInput.value.toLowerCase().trim();
   filteredCards = Array.from(cards).filter((card) => {
+    const tag = card.querySelector(".tag").textContent.toLowerCase(); //details
     const address = card.querySelector("h2").textContent.toLowerCase(); //home address
     const description = card.querySelector("p").textContent.toLowerCase(); //details
 
-    return address.includes(searchTerm) || description.includes(searchTerm);
+    return (
+      address.includes(searchTerm) ||
+      description.includes(searchTerm) ||
+      tag.includes(searchTerm)
+    );
   });
 
   // reset the carousel to show the first filtered results

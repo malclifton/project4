@@ -1,42 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>123 Oak Street, Anytown USA 12345
-    </title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>123 Oak Street, Anytown USA 12345</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <h1>123 Oak Street, Anytown USA 12345
-        </h1>
-        <div class="header-icons">
-            <div class="search-bar">
-                <input type="text" placeholder="For Sale">
-            </div>
-            <button class="menu-btn">
-                <img src="../img/menu-59.png" alt="Menu">
-            </button>
+      
+      <div class="container">
+      <div class="header">
+<h1>123 Oak Street, Anytown USA 12345</h1>      
+  <div class="header-right">
+          <div class="header-buttons">
+            <a onclick="window.location.href = '../landingpage.html';">⌂</a>
+            <a onclick="window.location.href = '../account.html';">☺</a>
+            <a onclick="window.location.href = '../favorites.html';">♡</a>
+          </div>
+          <div class="property-search">
+            <input
+              type="search"
+              placeholder="For Sale"
+              id="propertySearch"
+              name="propertySearch"
+            />
+            <button>⌕</button>
+          </div>
         </div>
+      </div>
+      <br /><br /><br />
     </header>
     <main>
-        <div class="property-container">
-            <div class="property-details">
-                <div class="property-image">
-                    <img src="../img/property_8.jpeg" alt="Property Image">
-                </div>
-                <div class="property-info">
-                    <h2>HOUSE</h2>
-                    <p>3 Beds | 3 Baths | 3-Car Garage</p>
-                    <p>This is a spacious home with a bold, dark exterior color palette. The home features multiple gables, large windows, and a covered front porch supported by thick, tapered columns. The landscaping includes a well-manicured lawn and neatly trimmed shrubs.
-                    </p>
-                </div>
-                <div class="heart-icon">
-                    <img src="../img/heart-1179072_640.webp" alt="Favorite">
-                </div>
-            </div>
+      <div class="property-container">
+        <div class="property-details">
+          <div class="property-image">
+            <img src="../img/property_8.jpeg" alt="Property Image" />
+          </div>
+          <div class="property-info">
+            <h2>MANSION</h2>
+            <p>6 Beds | 8 Baths | 4-Car Garage</p>
+            <p>
+              This is a spacious home with a bold, dark exterior color palette.
+              The home features multiple gables, large windows, and a covered
+              front porch supported by thick, tapered columns. The landscaping
+              includes a well-manicured lawn and neatly trimmed shrubs.
+            </p>
+          </div>
+        
         </div>
+      </div>
     </main>
-</body>
+      <script src="../index.js"></script>
+  </body>
 </html>

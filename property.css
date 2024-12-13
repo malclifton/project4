@@ -56,6 +56,11 @@ h1 {
   border: none;
   font-size: 25px;
   cursor: pointer;
+  color:black;
+}
+
+.header-buttons a:hover{
+  color: #666;
 }
 
 .property-search {
@@ -123,6 +128,8 @@ h1 {
   overflow: hidden; /* Prevent image from spilling over */
 }
 
+
+
 .property-image img {
   width: 100%; /* Ensure the image covers the full width */
   height: 100%; /* Ensure the image covers the full height */
@@ -155,7 +162,7 @@ h1 {
   font-size: 20px;
   cursor: pointer;
   transition: color 0.3s;
-    background: none;
+  background: none;
   border: none;
   padding: 0;
   cursor: pointer;
@@ -163,10 +170,28 @@ h1 {
   transition: color 0.3s; /* Smooth transition for color change */
 }
 
+.infoButton{
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+.infoButton button:hover{
+  color: #666;
+}
+
 .favorite-icon button:hover {
   color: #f06292;
 }
 
 .favorite-icon button.liked {
+  color: #f06292;
+}
+
+.add-favorite.favorited {
   color: #f06292;
 }
