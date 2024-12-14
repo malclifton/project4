@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $_SESSION['email'] = $email;
             $_SESSION['username'] = $user['username'];
 
-            header("Location: ./landingpage.html?signin=success&username=" . urldecode($user['username']));
+            header("Location: ./landingpage.php?signin=success&username=" . urldecode($user['username']));
             $conn->close();
             exit;
         } else {
