@@ -20,7 +20,7 @@ $properties = file('./properties.txt', FILE_IGNORE_NEW_LINES);
       <div class="header-right">
         <div class="header-buttons">
           <a onclick="window.location.href = './landingpage.html';">⌂</a>
-          <a onclick="window.location.href = './account.html';">☺</a>
+          <a onclick="window.location.href = './propertiesList.php';">🕶</a>
           <a onclick="window.location.href = './favorites.html';">♡</a>
         </div>
         <div class="property-search">
