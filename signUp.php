@@ -18,7 +18,7 @@ if (! filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 if (strlen($username) < 6) {
-    die("Username required");
+    die("Username required and must be at least 6 characters");
 }
 
 if (strlen($password) < 6) {
@@ -47,13 +47,13 @@ $pass = "mclifton6";
 $dbname = "mclifton6";
 
 $conn = new mysqli($host, $user, $pass, $dbname);
-if ($conn->connect_error) { //generate error
+if ($conn->connect_error) {
     echo "Could not connect to server\n";
     die("connection failed: " . $conn->connect_error);
 } else {
     echo "Connection established\n";
 }
-echo mysqli_get_server_info($conn) . "\n"; //returns server version
+echo mysqli_get_server_info($conn) . "\n";
 
 $stmt = $conn->prepare("INSERT INTO users2 (firstname, lastname, email, username, password) VALUES (?, ?, ?, ?, ?)");
 $stmt->bind_param("sssss", $fname, $lname, $email, $username, $password_hash);

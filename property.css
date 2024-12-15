@@ -113,7 +113,6 @@ h1 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
-  display: none; /* Initially hide all cards */
   width: 33%; /* Show 3 cards at a time */
   margin: 0 10px;
   height: 350px; /* Set a fixed height for all property cards */

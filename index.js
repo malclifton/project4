@@ -38,7 +38,6 @@ nextButton.addEventListener("click", () => {
   }
 });
 
-// filter based on the search query
 propertySearchInput.addEventListener("input", () => {
   const searchTerm = propertySearchInput.value.toLowerCase().trim();
   filteredCards = Array.from(cards).filter((card) => {
@@ -53,7 +52,6 @@ propertySearchInput.addEventListener("input", () => {
     );
   });
 
-  // reset the carousel to show the first filtered results
   currentIndex = 0;
   updateCarousel();
 });

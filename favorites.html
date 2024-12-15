@@ -1,45 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./property.css" />
-    <title>HubbleHome Favorites</title>
-  </head>
 
-  <body>
-    <div class="container">
-      <br /><br /><br />
-      <div class="header">
-        <h1>Properties</h1>
-        <div class="header-right">
-          <div class="header-buttons">
-            <a onclick="window.location.href = './landingpage.php';">⌂</a>
-            <a onclick="window.location.href = './propertiesList.php';">🕶</a>
-            <a onclick="window.location.href = './favorites.html';">♡</a>
-          </div>
-          <div class="property-search">
-            <input
-              type="search"
-              placeholder="For Sale"
-              id="propertySearch"
-              name="propertySearch"
-            />
-            <button>⌕</button>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./property.css" />
+  <title>HubbleHome Favorites</title>
+</head>
+
+<body>
+  <div class="container">
+    <br /><br /><br />
+    <div class="header">
+      <h1>Favorites</h1>
+      <div class="header-right">
+        <div class="header-buttons">
+          <a onclick="window.location.href = './landingpage.php';">⌂</a>
+          <a onclick="window.location.href = './propertiesList.php';">🕶</a>
+          <a onclick="window.location.href = './favorites.html';">♡</a>
+        </div>
+        <div class="property-search">
+          <input type="search" placeholder="For Sale" id="propertySearch" name="propertySearch" />
+          <button>⌕</button>
         </div>
       </div>
-      <br /><br /><br />
-      <div id="favorites-container">
-        <script>
-          // Load favorites into the container
-          document.addEventListener("DOMContentLoaded", () => {
-            loadFavorites("#favorites-container");
-          });
-        </script>
-      </div>
-      <script src="./favorites.js"></script>
-      <script src="./index.js"></script>
     </div>
-  </body>
+    <br /><br /><br />
+   
+  <script src="./favorites.js"></script>
+</body>
+
 </html>

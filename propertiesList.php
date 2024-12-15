@@ -1,5 +1,16 @@
 <?php
-$properties = file('./properties.txt', FILE_IGNORE_NEW_LINES);
+$host = "localhost";
+$user = "mclifton6";
+$pass = "mclifton6";
+$dbname = "mclifton6";
+
+$conn = new mysqli($host, $user, $pass, $dbname);
+if ($conn->connect_error) {
+  die("Database connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT id, tag, address, description, image_path FROM properties";
+$result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -24,11 +35,7 @@ $properties = file('./properties.txt', FILE_IGNORE_NEW_LINES);
           <a onclick="window.location.href = './favorites.html';">♡</a>
         </div>
         <div class="property-search">
-          <input
-            type="search"
-            placeholder="For Sale"
-            id="propertySearch"
-            name="propertySearch" />
+          <input type="search" placeholder="For Sale" id="propertySearch" name="propertySearch" />
           <button>⌕</button>
         </div>
       </div>
@@ -38,38 +45,36 @@ $properties = file('./properties.txt', FILE_IGNORE_NEW_LINES);
       <button class="carousel-button" id="prevButton">⪡</button>
       <div class="carousel-container">
         <?php
-        $index = 1;
-        foreach ($properties as $line):
-          // Split the line into an array
-          $details = explode('|', $line);
-
-          //image path (last element of the array)
-          $image = array_pop($details); // removes and returns the last element (image path)
-
-          // join remaining details
-          $address = $details[1];
-          $tag = $details[0];
-          $description = implode(' | ', array_slice($details, 2));
+        if ($result->num_rows > 0) {
+          while ($row = $result->fetch_assoc()) {
+            $tag = htmlspecialchars($row['tag']);
+            $address = htmlspecialchars($row['address']);
+            $description = htmlspecialchars($row['description']);
+            $image = htmlspecialchars($row['image_path']);
+            $propertyId = $row['id'];
         ?>
-          <div class="property-card">
-            <div class="property-image">
-              <img src="<?= htmlspecialchars($image) ?>" alt="Property">
+            <div class="property-card">
+              <div class="property-image">
+                <img src="<?= $image ?>" alt="Property">
+              </div>
+              <div class="property-info">
+                <div class="tag"><?= $tag ?></div>
+                <h2><?= $address ?></h2>
+                <p><?= $description ?></p>
+              </div>
+              <div class="favorite-icon">
+                <button class="add-favorite" data-property-id="<?= $propertyId ?>">❤</button>
+              </div>
+              <div class="details-button">
+                <button class="infoButton" onclick="window.location.href='./property/p<?= $propertyId ?>.html';">View Property</button>
+              </div>
             </div>
-            <div class="property-info">
-              <div class="tag"><?= htmlspecialchars($tag) ?></div>
-              <h2><?= htmlspecialchars($address) ?></h2>
-              <p><?= htmlspecialchars($description) ?></p>
-            </div>
-            <div class="favorite-icon">
-              <button class="add-favorite">❤</button>
-            </div>
-            <div class="details-button">
-              <button class="infoButton" onclick="window.location.href='./property/p<?= $index ?>.html';">View Property</button>
-            </div>
-          </div>
         <?php
-          $index++;
-        endforeach; ?>
+          }
+        } else {
+          echo "<p>No properties found.</p>";
+        }
+        ?>
       </div>
 
       <button class="carousel-button" id="nextButton">⪢</button>
@@ -80,3 +85,7 @@ $properties = file('./properties.txt', FILE_IGNORE_NEW_LINES);
 </body>
 
 </html>
+
+<?php
+$conn->close();
+?>

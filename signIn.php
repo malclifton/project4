@@ -1,7 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    // Retrieve input data from POST request
     $email = trim($_POST["email"] ?? '');
     $password = trim($_POST["password"] ?? '');
 
@@ -16,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $dbname = "mclifton6";
 
     $conn = new mysqli($host, $user, $pass, $dbname);
-    if ($conn->connect_error) { //generate error
+    if ($conn->connect_error) {
         echo json_encode(["success" => false, "message" => "Database connection failed."]);
         exit;
     }
@@ -33,7 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $result = $stmt->get_result();
 
     if ($user = $result->fetch_assoc()) {
-        // verify the password
         if (password_verify($password, $user["password"])) {
             session_start();
             $_SESSION['logged_in'] = true;

@@ -64,25 +64,6 @@ h1 {
   color: #666;
 }
 
-.property-search {
-  display: flex;
-  align-items: center;
-}
-
-.property-search input {
-  padding: 5px 10px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  margin-right: 10px;
-}
-
-.property-search button {
-  background: none;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-}
   
   /* Main Section */
   main {
