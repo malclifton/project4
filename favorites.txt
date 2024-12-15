@@ -1,0 +1,2 @@
+HOUSE|654 Elm Drive|5 Beds|3 Baths|4 Car Garage|./img/property_4.jpeg
+HOUSE|987 Sycamore Street|2 Beds|2 Baths|2 Car Garage|./img/property_5.jpeg
